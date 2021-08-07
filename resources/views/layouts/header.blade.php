@@ -10,7 +10,6 @@
         <a class="mr-5 hover:text-gray-900" href="/about">About Us</a>
         <a class="mr-5 hover:text-gray-900" href="/gallery">Gallery</a>
         <a class="mr-5 hover:text-gray-900" href="/cars/create">Add New Car</a>
-        <a class="mr-5 hover:text-gray-900">Car List</a>
         <a class="mr-5 hover:text-gray-900">Customer List</a>
       </nav>
       <button class="inline-flex items-center text-gray-50 bg-green-500 border-0 py-1 px-3 focus:outline-none hover:bg-green-400 rounded text-base mt-4 md:mt-0">Login/Register

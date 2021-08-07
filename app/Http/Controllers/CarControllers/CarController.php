@@ -17,7 +17,7 @@ class CarController extends Controller
      */
     public function index()
     {
-        return view('cars.index');
+        return redirect('/gallery');
     }
 
     /**
@@ -60,18 +60,18 @@ class CarController extends Controller
             'status' => 'Available',
         ]);
 
-        return redirect('/cars')->with('message', 'New car add successfully');
+        return redirect('/gallery/' . $brand->name);
     }
 
     /**
      * Display the specified resource.
      *
-     * @param  int  $id
+     * @param  string  $slug
      * @return \Illuminate\Http\Response
      */
-    public function show($id)
+    public function show($slug)
     {
-        //
+        return view('cars.show', ['car' => Car::firstWhere('slug', $slug)]);
     }
 
     /**

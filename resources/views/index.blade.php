@@ -6,9 +6,9 @@
     <div class="container px-5 py-24 mx-auto">
         <h1 class="uppercase text-gray-900 text-center mb-10 text-5xl">Feature Cars</h1>
         <div class="flex flex-wrap -m-4">
-            @for ($i=0;$i<8;$i++)
+            @foreach ($cars as $car)
                 <x-car-card :car="$car"/>
-            @endfor
+            @endforeach
         </div>
       </div>
     </div>

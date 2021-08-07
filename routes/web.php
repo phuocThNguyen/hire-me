@@ -17,9 +17,13 @@ use Illuminate\Support\Facades\Route;
 |
 */
 
-Route::view('/', 'index', ['car' => Car::all()->first()]);
+Route::view('/', 'index', ['cars' => Car::orderBy('price', 'desc')->take(8)->get()]);
 Route::view('/about', 'about');
+
 Route::get('/gallery', [CarBrandController::class, 'index']);
+
+Route::get('/gallery/{brand_name}', [CarBrandController::class, 'cars']);
+
 Route::resource('/cars', CarController::class);
 Auth::routes();
 
